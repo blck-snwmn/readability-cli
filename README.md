@@ -1,15 +1,21 @@
 # readability-cli
 
-To install dependencies:
+Extract article content from a URL and convert it to Markdown.
+
+## Usage
 
 ```bash
-bun install
+bun run index.ts <URL>
 ```
 
-To run:
+## Build
 
 ```bash
-bun run index.ts
+bun build --compile --minify --sourcemap ./index.ts --outfile readability-cli
 ```
 
-This project was created using `bun init` in bun v1.3.2. [Bun](https://bun.com) is a fast all-in-one JavaScript runtime.
+## Run Binary
+
+```bash
+./readability-cli <URL>
+```
