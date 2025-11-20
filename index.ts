@@ -1,5 +1,6 @@
 import { Readability } from "@mozilla/readability";
 import { parseHTML } from "linkedom";
+import { NodeHtmlMarkdown } from "node-html-markdown";
 
 const url = Bun.argv[2];
 
@@ -20,7 +21,10 @@ try {
   const article = reader.parse();
 
   if (article) {
-    console.log(JSON.stringify(article, null, 2));
+    const markdown = NodeHtmlMarkdown.translate(article.content || "");
+    console.log(`# ${article.title}`);
+    console.log(``);
+    console.log(markdown);
   } else {
     console.error("Failed to parse article");
     process.exit(1);
