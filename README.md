@@ -11,11 +11,11 @@ bun run index.ts <URL>
 ## Build
 
 ```bash
-bun build --compile --minify --sourcemap ./index.ts --outfile readability-cli
+bun run build
 ```
 
 ## Run Binary
 
 ```bash
-./readability-cli <URL>
+./dist/readability-cli <URL>
 ```
