@@ -10,7 +10,7 @@
     "build": "bun build ./index.ts --compile --outfile ./dist/readability-cli"
   },
   "peerDependencies": {
-    "typescript": "^5"
+    "typescript": "^5 || ^6.0.0"
   },
   "dependencies": {
     "@mozilla/readability": "^0.6.0",
