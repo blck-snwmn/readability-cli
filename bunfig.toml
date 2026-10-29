@@ -1,0 +1,7 @@
+[install]
+# Supply-chain hardening (see https://bun.com/docs/pm/cli/install#minimum-release-age).
+#
+# Delay installing newly published versions so that a compromised release has
+# time to be detected and pulled before it can enter the dependency tree.
+# Value is in seconds; 604800 = 1 week (matches Renovate's minimumReleaseAge).
+minimumReleaseAge = 604800
